@@ -1,6 +1,6 @@
-# Fine-Tuning LLaMA 3 8B with `Unsloth` on AWS `g6e.12xlarge` EC2 instance
+# Fine-Tuning HF Models with `Unsloth` on AWS `g6e.12xlarge` EC2 instance
 
-This repository demonstrates fine-tuning Meta's LLaMA 3 8B model using the Unsloth framework on an AWS `g6e.12xlarge` EC2 instance. View the instructions below to launch the EC2 instance, clone this repository and run the example notebook.
+This repository demonstrates fine-tuning any Hugging Face model (supported on Unsloth) using the Unsloth framework on an AWS `g6e.12xlarge` EC2 instance. View the instructions below to launch the EC2 instance, clone this repository and run the example notebook.
 
 ## What is `Unsloth`?
 
