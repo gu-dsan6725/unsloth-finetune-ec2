@@ -24,6 +24,7 @@ dependencies = [
     "zmq",
     "ipykernel",
     "python-dotenv",
+    "nvitop",
 ]
 
 [build-system]

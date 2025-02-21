@@ -55,3 +55,31 @@ To run the provided Jupyter notebook, follow the steps below to create an EC2 in
 
 1. Open the [`finetune_llama3_unsloth.ipynb`](finetune_llama3_unsloth.ipynb) notebook and run all cells. This will train the model, run inference against the model using `Unsloth`'s `FastLanguageModel.for_inference(model)`. If you have provided a valid HF token, this model is also served on Ollama through this notebook and we can run inferences on that as well.
 
+## Results
+
+This notebook also produces results in the form of EC2 metrics. The results can be found in the [`results`](results) directory. The results directory contains the following two files:
+
+1. [`ec2_metrics.csv`](results/ec2_metrics.csv): This file contains instance utilization metrics. For example, the mean GPU utilization, CPU utilization and the memory used up by the instance. These metrics are only collected during the training process. View an example of some of the metrics generated below:
+
+    ```{.csv}
+    timestamp,cpu_percent_mean,memory_percent_mean,memory_used_mean,gpu_utilization_mean,gpu_memory_used_mean,gpu_memory_free_mean,gpu_memory_total_mean
+    2025-02-21 19:42:37,0.0,2.9,7.651355743408203,0.0,16002.375,29370.312500000004,46068.0
+    2025-02-21 19:42:42,1.9079216328354662,3.321088803677962,7.926143636541902,72.13185182101137,16602.57081138804,28770.116622093094,46068.0
+    2025-02-21 19:42:47,2.003390286757495,3.410012950457253,7.992933634798297,82.83819711742942,16809.281850116146,28563.40561512593,46068.0
+    ```
+
+1. [`training_stats.txt`](results/training_stats.txt): This file logs some of the trainer stats, such as the number of global steps it took to get to a specific training loss, the train runtime, samples per second, steps per second, etc. View an example of running this training on a `g6e.12xlarge` instance:
+
+    ```{.txt}
+    Training Statistics:
+    Global Steps: 60
+    Training Loss: 1.1542
+
+    Metrics:
+    - Train Runtime: 107.371 seconds
+    - Training Samples/Second: 4.470
+    - Training Steps/Second: 0.559
+    - Total FLOPS: 1.39e+16
+    - Final Train Loss: 1.1542
+    ```
+
