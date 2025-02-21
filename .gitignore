@@ -2,6 +2,7 @@
 llama.cpp/
 model/
 unsloth_compiled_cache/
+unsloth_training_sample.egg-info/
 lora_model/
 outputs/
 *unsloth*sentencepiece_temp/
