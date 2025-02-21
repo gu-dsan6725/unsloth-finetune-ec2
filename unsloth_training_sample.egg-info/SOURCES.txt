@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-unsloth_training_sample.egg-info/PKG-INFO
-unsloth_training_sample.egg-info/SOURCES.txt
-unsloth_training_sample.egg-info/dependency_links.txt
-unsloth_training_sample.egg-info/requires.txt
-unsloth_training_sample.egg-info/top_level.txt
