@@ -1,3 +1,28 @@
+Metadata-Version: 2.2
+Name: unsloth-training-sample
+Version: 0.1.0
+Summary: Project using unsloth for training FMs
+Requires-Python: <3.13,>=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: bitsandbytes
+Requires-Dist: accelerate
+Requires-Dist: xformers==0.0.29
+Requires-Dist: peft
+Requires-Dist: trl
+Requires-Dist: triton
+Requires-Dist: cut_cross_entropy
+Requires-Dist: unsloth_zoo
+Requires-Dist: sentencepiece
+Requires-Dist: protobuf
+Requires-Dist: datasets
+Requires-Dist: huggingface_hub
+Requires-Dist: hf_transfer
+Requires-Dist: unsloth
+Requires-Dist: transformers
+Requires-Dist: zmq
+Requires-Dist: ipykernel
+Requires-Dist: python-dotenv
+
 # Fine-Tuning LLaMA 3 8B with `Unsloth` on AWS `g6e.12xlarge` EC2 instance
 
 This repository demonstrates fine-tuning Meta's LLaMA 3 8B model using the Unsloth framework on an AWS `g6e.12xlarge` EC2 instance. View the instructions below to launch the EC2 instance, clone this repository and run the example notebook.

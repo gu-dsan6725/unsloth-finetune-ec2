@@ -23,6 +23,7 @@ dependencies = [
     "transformers",
     "zmq",
     "ipykernel",
+    "python-dotenv",
 ]
 
 [build-system]
