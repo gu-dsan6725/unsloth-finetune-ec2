@@ -55,7 +55,7 @@ To run the provided Jupyter notebook, follow the steps below to create an EC2 in
 
 1. Open the [`finetune_llama3_unsloth.ipynb`](finetune_llama3_unsloth.ipynb) notebook and run all cells. This will train the model, run inference against the model using `Unsloth`'s `FastLanguageModel.for_inference(model)`. If you have provided a valid HF token, this model is also served on Ollama through this notebook and we can run inferences on that as well.
 
-## Results
+## Results: EC2 instance utilization metrics & training stats
 
 This notebook also produces results in the form of EC2 metrics. The results can be found in the [`results`](results) directory. The results directory contains the following two files:
 
