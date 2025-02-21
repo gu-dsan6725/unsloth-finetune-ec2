@@ -1,9 +1,20 @@
-# Ignore all files
-/*
+# Specific directories to ignore
+llama.cpp/
+model/
+unsloth_compiled_cache/
+lora_model/
+outputs/
+*unsloth*sentencepiece_temp/
+a_model/
 
-# Except the Jupyter notebook(s)
-!*.ipynb
-
-# Don't ignore the .gitignore file
-!.gitignore
-!README.md
+# Common Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.env
+.venv
+env/
+venv/
+ENV/

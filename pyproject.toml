@@ -1,0 +1,33 @@
+[project]
+name = "unsloth-training-sample"
+version = "0.1.0"
+description = "Project using unsloth for training FMs"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "bitsandbytes",
+    "accelerate",
+    "xformers==0.0.29",
+    "peft",
+    "trl",
+    "triton",
+    "cut_cross_entropy",
+    "unsloth_zoo",
+    "sentencepiece",
+    "protobuf",
+    "datasets",
+    "huggingface_hub",
+    "hf_transfer",
+    "unsloth",
+    "transformers",
+    "zmq",
+    "ipykernel",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
