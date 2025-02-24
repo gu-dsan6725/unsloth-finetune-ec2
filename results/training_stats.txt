@@ -1,10 +1,10 @@
 Training Statistics:
 Global Steps: 60
-Training Loss: 1.1340
+Training Loss: 1.1338
 
 Metrics:
-- Train Runtime: 126.868 seconds
-- Training Samples/Second: 3.783
-- Training Steps/Second: 0.473
+- Train Runtime: 126.334 seconds
+- Training Samples/Second: 3.799
+- Training Steps/Second: 0.475
 - Total FLOPS: 1.39e+16
-- Final Train Loss: 1.1340
+- Final Train Loss: 1.1338
