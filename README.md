@@ -88,7 +88,7 @@ This notebook also produces results in the form of EC2 metrics. The results can 
 
 ## Problem 1
 
-Your task is to follow all the instructions provided above to fine-tune the `Llama3.1-8b` model (all code is provided to you), now create a copy of the `SFT_hf_model_unsloth.ipynb` notebook and call it `problem1.ipynb` and modify it to fine-tune the `llama3.2-1b` model for the `banking77` dataset which you can download from Hugging Face ([link](https://huggingface.co/datasets/mteb/banking77)). 
+Your task is to follow all the instructions provided above to fine-tune the `Llama3.1-8b` model (all code is provided to you), now create a copy of the `SFT_hf_model_unsloth.ipynb` notebook and call it `problem1.ipynb` and modify it to fine-tune the `meta-llama/Llama-3.2-1B-Instruct` model for the `banking77` dataset which you can download from Hugging Face ([link](https://huggingface.co/datasets/mteb/banking77)). 
 
 1. You would need to update the code to download the `banking77` dataset, and use the fields in that dataset (note that these are different from the ones in the `SFT_hf_model_unsloth.ipynb` notebook).
 1. You would also need to update the instructions in the prompt and chat templates as per your task.
