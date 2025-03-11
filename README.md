@@ -1,6 +1,8 @@
-# Fine-Tuning HF Models with `Unsloth` on AWS `g6e.2xlarge` EC2 instance
+# Fine-Tuning HF Models with `Unsloth` on AWS `g6.xlarge` EC2 instance
 
-This repository demonstrates fine-tuning any Hugging Face model (supported on Unsloth) using the Unsloth framework on an AWS `g6e.2xlarge` EC2 instance. View the instructions below to launch the EC2 instance, clone this repository and run the example notebook.
+This repository demonstrates fine-tuning any Hugging Face model (supported on Unsloth) using the Unsloth framework on an AWS `g6.xlarge` EC2 instance. View the instructions below to launch the EC2 instance, clone this repository and run the example notebook.
+
+**Skip to [problem 1](#problem-1) for what you have to submit for this lab**.
 
 ## What is **Unsloth**?
 
@@ -38,7 +40,7 @@ To run the provided Jupyter notebook, follow the steps below to create an EC2 in
 1. Restore Python virtual environment from the pyproject.toml file.
 
     ```bash
-    uv venv && source .venv/bin/activate && uv pip sync pyproject.toml
+    uv venv --python 3.12 && source .venv/bin/activate && uv pip sync pyproject.toml
     ```
 
 1. Create a conda kernel. This is needed to run the notebook on your EC2 instance:
@@ -84,3 +86,27 @@ This notebook also produces results in the form of EC2 metrics. The results can 
     - Final Train Loss: 1.1542
     ```
 
+## Problem 1
+
+Your task is to follow all the instructions provided above to fine-tune the `Llama3.1-8b` model (all code is provided to you), now create a copy of the `SFT_hf_model_unsloth.ipynb` notebook and call it `problem1.ipynb` and modify it to fine-tune the `llama3.2-1b` model for the `banking77` dataset which you can download from Hugging Face ([link](https://huggingface.co/datasets/mteb/banking77)). 
+
+1. You would need to update the code to download the `banking77` dataset, and use the fields in that dataset (note that these are different from the ones in the `SFT_hf_model_unsloth.ipynb` notebook).
+1. You would also need to update the instructions in the prompt and chat templates as per your task.
+1. Lookout for any other parameter that needs to be updated.
+1. Run the training for 1 epoch and set the `max_steps` to 600.
+1. Once the model is trained, run inference on the following inputs:
+    - I see a charge on my credit card statement but I paid on time, why?
+    - Do you have a branch in Timbuktu?
+    - I lost my card and my replacement card has not arrived.
+1. Save the questions and outputs from your fine-tuned model in a file called `problem1_task1.txt`. The `SFT_hf_model_unsloth.ipynb` uses `TextStreamer` you would need to use something else to get the output in a string variable. The file contents should look like:
+
+    ```
+    input: I see a charge on my credit card statement but I paid on time, why?
+    category: <model output>
+    input: Do you have a branch in Timbuktu?
+    category: <model output>
+    input: I lost my card and my replacement card has not arrived.
+    category: <model output>
+    ```
+
+Commit and push `problem1.ipynb` and `problem1_task1.txt` to the repo.

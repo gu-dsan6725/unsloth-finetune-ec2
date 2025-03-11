@@ -1,0 +1,6 @@
+input: I see a charge on my credit card statement but I paid on time, why?
+category: card_payment_not_recognised
+input: Do you have a branch in Timbuktu?
+category: country_support
+input: I lost my card and my replacement card has not arrived.
+category: card_arrival
